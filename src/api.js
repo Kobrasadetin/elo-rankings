@@ -39,7 +39,7 @@ const api = {
 		}, query);
 
 		if (!valid) {
-			throw new Error(ajv.errors)
+			throw new Error(ajv.errors + ' ## ' +  JSON.stringify(ajv.errors))
 		}
 
 		const players = await getCollection('players')
